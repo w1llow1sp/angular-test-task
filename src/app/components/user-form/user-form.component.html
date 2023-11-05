@@ -1,0 +1,59 @@
+<section>
+  <mat-card class="example-card">
+    <mat-card-header class="top-section">
+      <div mat-card-avatar class="example-header-image">
+      </div>
+      <mat-card-title>Иван Иванов</mat-card-title>
+      <mat-card-subtitle >
+        <div class="subtitle-wrapper">
+          <div class="card-wrapper">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="folder"></mat-icon>
+            <a class="card-text">Telegram</a>
+          </div>
+          <div class="card-wrapper">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="folder"></mat-icon>
+            <a class="card-text">Github</a>
+          </div>
+          <div class="card-wrapper">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="folder"></mat-icon>
+            <a class="card-text">Resume</a>
+          </div>
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form  [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
+        <div class="row">
+        <!-- <mat-form-field class="example-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">-->
+        <div class="col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Номер телефона</mat-label>
+            <input matInput placeholder="+7 (900) 000 00 00" formControlName="phone"/>
+            <mat-hint style="color:red" *ngIf="userForm.get('phone')?.touched && userForm.get('phone')?.errors?.['required']">
+              Введите телефон в формате +7 (900) 000-00-00
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email@mail.ru" formControlName="email"/>
+            <mat-hint style="color:red" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['required']">
+              Введите валидный email
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit"> Начать</button>
+        <!--      </mat-form-field>-->
+            </div>
+
+
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+
+
+</section>

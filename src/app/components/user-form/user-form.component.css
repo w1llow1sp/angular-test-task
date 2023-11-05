@@ -1,0 +1,57 @@
+section {
+  margin-top: 20px;
+}
+
+.top-section {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mat-card-subtitle {
+  margin: 20px;
+}
+
+.example-card {
+  width: 70vw;
+}
+
+.example-header-image {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuAka8KKvlEAcFt56QVt90WZ6bCAJMCfd8Q&usqp=CAU");
+  background-size: cover;
+}
+
+.subtitle-wrapper {
+  display: flex;
+
+}
+
+.card-wrapper {
+  padding: 7px 7px 7px 0;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+}
+
+@media (max-width: 485px ) {
+  .subtitle-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+.card-text {
+  color: #786fe1;
+  cursor: pointer;
+}
+
+
+.example-full-width {
+  width: 100%;
+}
+
+/**/
+
+
